@@ -26,10 +26,12 @@ while 1:
         print("Goin' forward >>\n\n")
         print("' mm:ss elapsed'<<")
         break
+	
         #First and second row description
 firstRow=str(input('Type what to insert in the First row\n             '))
 secondRow=str(input('Type what to insert in the Second row\n             '))
 
+#Updates config.ini every second, not less because that's how long EasyRP likes it
 numFrames=int(input('Insert the total number of frames\n             '))
 
 pics=[]
