@@ -24,7 +24,7 @@ while 1:
             break
     elif (select=='f'):
         print("Goin' forward >>")
-        print("' mm:ss elapsed'\n\n<<")
+        print("' mm:ss elapsed'<<\n\n")
         break
 	
         #First and second row description
