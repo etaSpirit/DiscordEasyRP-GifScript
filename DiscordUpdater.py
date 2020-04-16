@@ -30,9 +30,7 @@ while 1:
 firstRow=str(input('Type what to insert in the First row\n             '))
 secondRow=str(input('Type what to insert in the Second row\n             '))
 
-   #Picture name used
-#print('\n\nList of all Images:\n')
-numFrames=int(input('Insert the number of frames\n             '))
+numFrames=int(input('Insert the total number of frames\n             '))
 
 pics=[]
 for x in range(numFrames):
