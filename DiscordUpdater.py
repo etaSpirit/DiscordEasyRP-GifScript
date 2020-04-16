@@ -41,7 +41,7 @@ for x in range(numFrames):
 #courrentDir=os.getcwd()
 #courrentDir=courrentDir+'\pics'
 #print(os.listdir(courrentDir))
-largeImgDescription=str(input("Insert the description of the Large image (enter nothing if you don't want the description)\n             "))
+largeImgDescription=str(input("Insert the description of the Gif image (enter nothing if you don't want the description)\n             "))
 smallImage=str(input('Insert the name of the Small image\n             '))
 smallImgDescription=str(input("Insert the description of the Small image (enter nothing if you don't want the description)\n             "))
 time.sleep(2)
