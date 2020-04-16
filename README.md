@@ -14,4 +14,6 @@ This script uses EasyRP (Custom Discord Rich Presence) https://github.com/Pizzab
 ![File Upload](https://cdn.discordapp.com/attachments/287236122075987969/700421380411359242/rp2.PNG)
 6. Run DiscordUpdater.py and follow the instructions
 
+
+
 For any questions add me on Discord: Capocoppe25#2670
