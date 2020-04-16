@@ -23,8 +23,8 @@ while 1:
             print('-- The timer will decrese from '+str(tts)+' Seconds --\n\n')
             break
     elif (select=='f'):
-        print("Goin' forward >>\n\n")
-        print("' mm:ss elapsed'<<")
+        print("Goin' forward >>")
+        print("' mm:ss elapsed'\n\n<<")
         break
 	
         #First and second row description
