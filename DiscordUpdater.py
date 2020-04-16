@@ -20,7 +20,7 @@ while 1:
             print('-- The timer will decrese from '+str(tts//60)+' Minutes and '+str(tts-sec_minutes)+' Seconds)) --\n\n')
             break
         else:
-            print('-- The timer will decrese from '+tts+' Seconds --\n\n')
+            print('-- The timer will decrese from '+str(tts)+' Seconds --\n\n')
             break
     elif (select=='f'):
         print("Goin' forward >>\n\n")
