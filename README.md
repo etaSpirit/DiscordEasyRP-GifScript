@@ -15,6 +15,7 @@ This script uses EasyRP (Custom Discord Rich Presence) https://github.com/Pizzab
    and any other images you may want to display as small image
 ![File Upload](https://cdn.discordapp.com/attachments/287236122075987969/700421380411359242/rp2.PNG)
 6. Run DiscordUpdater.py and follow the instructions
+   
    To clarify:
    
 ![Rows](https://cdn.discordapp.com/attachments/700725483503091833/700806279643398294/l.PNG)
