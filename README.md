@@ -17,7 +17,6 @@ This script uses EasyRP (Custom Discord Rich Presence) https://github.com/Pizzab
 6. Run DiscordUpdater.py and follow the instructions
    
    To clarify:
-   
 ![Rows](https://cdn.discordapp.com/attachments/700725483503091833/700806279643398294/l.PNG)
 
 
