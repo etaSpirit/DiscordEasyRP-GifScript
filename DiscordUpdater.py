@@ -1,7 +1,10 @@
 import time
 import os
 import array
-   
+
+#Set the delay between each frame (image) update
+#WATCH OUT, values less than 1 second will cause discord to skip frames
+framesDelay=1
 select='null'
 #Setting the time
 #Set time in seconds
@@ -38,9 +41,6 @@ pics=[]
 for x in range(numFrames):
   pics.append(x)
   
-#courrentDir=os.getcwd()
-#courrentDir=courrentDir+'\pics'
-#print(os.listdir(courrentDir))
 largeImgDescription=str(input("Insert the description of the Gif image (enter nothing if you don't want the description)\n             "))
 smallImage=str(input('Insert the name of the Small image\n             '))
 smallImgDescription=str(input("Insert the description of the Small image (enter nothing if you don't want the description)\n             "))
@@ -91,5 +91,5 @@ while 1:
 	f.write("SmallImage="+smallImage+"\n")
 	f.write("SmallImageTooltip="+smallImgDescription+"---\n")
 	f.close()
-	time.sleep(1)
+	time.sleep(framesDelay)
 
