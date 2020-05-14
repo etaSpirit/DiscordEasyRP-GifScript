@@ -2,7 +2,7 @@ import time
 import os
 import array
 
-#Set the delay between each frame (image) update
+#Set the delay between each frame (image) update in seconds
 #WATCH OUT, values less than 1 second will cause discord to skip frames
 framesDelay=1
 select='null'
