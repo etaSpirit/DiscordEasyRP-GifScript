@@ -14,8 +14,9 @@ This script uses EasyRP (Custom Discord Rich Presence) https://github.com/Pizzab
 5. Once there upload every single frame named in order from 0 to N _(don't worry if they're not in order in the asset upload page)_ 
    and any other images you may want to display as small image
 ![File Upload](https://cdn.discordapp.com/attachments/287236122075987969/700421380411359242/rp2.PNG)
-6. Run DiscordUpdater.py and follow the instructions
-   
+6. **Run DiscordUpdater.py** and follow the instructions
+     *Don't run the EasyRP.exe directly!*
+ 
    To clarify:
    
 ![Rows](https://cdn.discordapp.com/attachments/700725483503091833/700806279643398294/l.PNG)
