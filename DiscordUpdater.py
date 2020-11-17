@@ -23,35 +23,54 @@ while 1:
             print('-- The timer will decrese from '+str(tts//60)+' Minutes and '+str(tts-sec_minutes)+' Seconds)) --\n\n')
             break
         else:
-            print('-- The timer will decrese from '+str(tts)+' Seconds --\n\n')
+            print('-- The timer will decrese from '+tts+' Seconds --\n\n')
             break
     elif (select=='f'):
         print("Goin' forward >>")
         print("' mm:ss elapsed'\n\n")
         break
         #First and second row description
-firstRow=str(input('Type what to insert in the First row\n             '))
-secondRow=str(input('Type what to insert in the Second row\n             '))
+while 1:
+	firstRow=str(input('Type what to insert in the First row\n             '))
+	if len(firstRow)<3:
+		print ('You must enter more than 2 characters')
+	else:
+		break
+while 1:
+	secondRow=str(input('Type what to insert in the Second row\n             '))
+	if len(secondRow)<3:
+		print ('You must enter more than 2 characters')
+	else:
+		break
+		
 
-   #Picture name used
 numFrames=int(input('Insert the number of frames\n             '))
 
-pics=[]
-for x in range(numFrames):
-  pics.append(x)
-  
-largeImgDescription=str(input("Insert the description of the Large image (enter nothing if you don't want the description)\n             "))
+while 1:
+	largeImgDescription=str(input("Insert the description of the Large image (enter nothing if you don't want the description)\n             "))
+	lenght=len(largeImgDescription)
+	if lenght==1 or lenght==2 or lenght==3:
+		print ('You must insert more than 3 characters or leave blank')
+	else:
+		break
 smallImage=str(input('Insert the name of the Small image (without extension)\n             '))
-smallImgDescription=str(input("Insert the description of the Small image (enter nothing if you don't want the description)\n             "))
+while 1:
+	smallImgDescription=str(input("Insert the description of the Small image (enter nothing if you don't want the description)\n             "))
+	lenght=len(smallImgDescription)
+	if lenght==1 or lenght==2 or lenght==3:
+		print ('You must insert more than 3 characters or leave blank')
+	else:
+		break
+		
 time.sleep(2)
-
-print ('Done, starting Discord Rich Presence...')
-print ('Keep this open or EasyRP won\' update')
+print ('\n\n\n\n\n\nDone! - Starting Discord Rich Presence...')
+print ('Keep this running or EasyRP won\'t update!\n\n\n\n\n')
 time.sleep(0.65)
 Time=time.time()
 if (select=='b'):
 	endTime=Time+tts
 os.startfile('easyrp.exe')
+
 
 c=-1
 while 1:
@@ -95,7 +114,7 @@ while 1:
 	f.write("LargeImage="+str(c)+"\n")
 	f.write("LargeImageTooltip="+largeImgDescription+"\n")
 	f.write("SmallImage="+smallImage+"\n")
-	f.write("SmallImageTooltip="+smallImgDescription+"---\n")
+	f.write("SmallImageTooltip="+smallImgDescription+"\n")
 	f.close()
 	time.sleep(framesDelay)
 
