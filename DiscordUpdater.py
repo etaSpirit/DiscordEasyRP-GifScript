@@ -1,15 +1,15 @@
 import time
 import os
 import array
-
-#Set the delay between each frame (image) update in seconds
+   
+#Set the delay between each frame (image) update / seconds
 #WATCH OUT, values less than 1 second will cause discord to skip frames
 framesDelay=1
 select='null'
 #Setting the time
 #Set time in seconds
 while 1:
-    if (select== 'null'):
+    if (select == 'null'):
         select = str(input('Time goes forward or backward? (f / b)\n             '))
     else:
         select = str(input('what? Type F or B\n             '))
@@ -23,26 +23,27 @@ while 1:
             print('-- The timer will decrese from '+str(tts//60)+' Minutes and '+str(tts-sec_minutes)+' Seconds)) --\n\n')
             break
         else:
-            print('-- The timer will decrese from '+str(tts)+' Seconds --\n\n')
+            print('-- The timer will decrese from '+tts+' Seconds --\n\n')
             break
     elif (select=='f'):
         print("Goin' forward >>")
         print("' mm:ss elapsed'\n\n")
         break
-	
         #First and second row description
 firstRow=str(input('Type what to insert in the First row\n             '))
 secondRow=str(input('Type what to insert in the Second row\n             '))
 
-#Updates config.ini every second, not less because that's how long EasyRP likes it
-numFrames=int(input('Insert the total number of frames\n             '))
+   #Picture name used
+#print('\n\nList of all Images:\n')
+print("Zero two, 24")
+numFrames=int(input('Insert the number of frames\n             '))
 
 pics=[]
 for x in range(numFrames):
   pics.append(x)
   
-largeImgDescription=str(input("Insert the description of the Gif image (enter nothing if you don't want the description)\n             "))
-smallImage=str(input('Insert the name of the Small image\n             '))
+largeImgDescription=str(input("Insert the description of the Large image (enter nothing if you don't want the description)\n             "))
+smallImage=str(input('Insert the name of the Small image (without extension)\n             '))
 smallImgDescription=str(input("Insert the description of the Small image (enter nothing if you don't want the description)\n             "))
 time.sleep(2)
 
@@ -50,6 +51,8 @@ print ('Done, starting Discord Rich Presence...')
 print ('Keep this open or EasyRP won\' update')
 time.sleep(0.65)
 Time=time.time()
+if (select=='b'):
+	endTime=Time+tts
 os.startfile('easyrp.exe')
 
 c=-1
@@ -74,15 +77,20 @@ while 1:
 	f.write(";#                                                                      #\n")
 	f.write(";########################################################################\n\n")
 	f.write("[Identifiers]\n")
-	f.write("ClientID=YOUR_CLIENT_ID\n\n")
+	f.write("ClientID=477436364296814592\n\n")
 	f.write("[State]\n")
 	f.write("State="+secondRow+"\n")
 	f.write("Details="+firstRow+"\n")
 	f.write("StartTimestamp="+str(Time))
 	f.write("\n\n")
-	f.write("EndTimestamp=\n\n")
+	if (select=='f'):
+		f.write("EndTimestamp=\n\n")
+	else:
+		f.write("EndTimestamp="+str(endTime))
+		f.write("\n\n")
 	f.write("[Images]\n")
-	if c == numFrames:
+	#condition that cycles through the frames
+	if (c == numFrames):
 		c=0
 	else:
 		c=c+1
