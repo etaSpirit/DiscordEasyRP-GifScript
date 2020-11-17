@@ -34,8 +34,6 @@ firstRow=str(input('Type what to insert in the First row\n             '))
 secondRow=str(input('Type what to insert in the Second row\n             '))
 
    #Picture name used
-#print('\n\nList of all Images:\n')
-print("Zero two, 24")
 numFrames=int(input('Insert the number of frames\n             '))
 
 pics=[]
@@ -77,7 +75,7 @@ while 1:
 	f.write(";#                                                                      #\n")
 	f.write(";########################################################################\n\n")
 	f.write("[Identifiers]\n")
-	f.write("ClientID=477436364296814592\n\n")
+	f.write("ClientID=YOUR_CLIENT_ID\n\n")
 	f.write("[State]\n")
 	f.write("State="+secondRow+"\n")
 	f.write("Details="+firstRow+"\n")
