@@ -1,4 +1,7 @@
 # DiscordEasyRP-GifScript
+
+-- Courrently working on a clean implementation in python --
+
 A little python script to cycle frames into Discord Rich Presence
 
 Python 3.6 or newer will be needed to execute the script
