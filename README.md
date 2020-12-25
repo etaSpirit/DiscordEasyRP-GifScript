@@ -1,6 +1,6 @@
 # DiscordEasyRP-GifScript
 
--- Courrently working on a clean implementation in python --
+-- Courrently working on a cleaner implementation --
 
 A little python script to cycle frames into Discord Rich Presence
 
