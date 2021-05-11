@@ -12,10 +12,8 @@ using namespace std;
 
 int main()
 {
-    /* Set the delay between each frame (image) update / seconds
-       WATCH OUT, values less than 1 second will cause discord to skip frames */
     //time vars
-    int framesDelay = 1;
+    char framesDelay;
     string select;
     int numFrames;
     int endTime;
@@ -58,30 +56,13 @@ int main()
         clientIDFirstTime = true;
     }
 
-    if (clientIDFirstTime == false)
-    {
-        //load previous conf
-        cout << "Would you like to load your previous configuration? (y / n)\n             ";
-        cin >> select;
-        while (true)
-        {
-            if (select == "y" || select == "Y" || select == "yes")
-            {
-                cout << "Loading previous configuration...";
-                break;
-            }
-            else if (select == "n" || select == "N" || select == "no")
-                break;
-            else
-                cout << "what? Type Y or N\n             ";
-        }
-    }
     
-    //setting the time in seconds
-    cout << "Time goes forward or backward? (f / b)\n             ";
-    cin >> select;
+
     while (true)
     {
+        //setting the time in seconds
+        cout << "Time goes forward or backward? (f / b)\n             ";
+        cin >> select;
         if (select=="b" || select=="B")
         {
             cout << "Going backwards <<";
@@ -108,10 +89,17 @@ int main()
             break;
         }
         else
-        {
-            cout << "what? Type F or B\n             ";
-            cin >> select;
-        }
+            cout << "what? Type F or B\n";
+    }
+    
+    while (true)
+    {
+        //set the delay
+        cout << "Insert the delay between frames in seconds\n             ";
+        cin >> framesDelay;
+        framesDelay *= 1000;
+        if (framesDelay < 1000)
+            cout << "Delay can't be less than one second for Discord limitations\n";
     }
 
     //first and second row desc
@@ -228,8 +216,7 @@ int main()
         conf << "SmallImage=" << smallImageName << "\n";
         conf << "SmallImageTooltip=" << smallImageDesc << "\n";
         conf.close();
-        Sleep(1000);
+        Sleep(framesDelay);
     }
     return 69;
 }
-
