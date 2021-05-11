@@ -101,6 +101,8 @@ int main()
         cout << framesDelay << endl;
         if (framesDelay < 1000)
             cout << "Delay can't be less than one second for Discord limitations\n";
+        else
+            break;
     }
 
     //first and second row desc
@@ -211,7 +213,6 @@ int main()
             c = 0;
         else
             c += 1;
-        cout << c << endl;
         conf << "LargeImage=" << c << "\n";
         conf << "LargeImageTooltip=" << largeImgDesc << "\n";
         conf << "SmallImage=" << smallImageName << "\n";
