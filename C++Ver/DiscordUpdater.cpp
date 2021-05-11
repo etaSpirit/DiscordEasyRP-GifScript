@@ -98,7 +98,6 @@ int main()
         cout << "Insert the delay between frames in seconds\n             ";
         cin >> framesDelay;
         framesDelay *= 1000;
-        cout << framesDelay << endl;
         if (framesDelay < 1000)
             cout << "Delay can't be less than one second for Discord limitations\n";
         else
