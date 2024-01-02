@@ -18,6 +18,3 @@ This script utilizes EasyRP (Custom Discord Rich Presence) https://github.com/Pi
 
 To clarify:\
 ![Cl](https://cdn.discordapp.com/attachments/362267949836271617/778385920671875072/view.PNG)
-
-
-For any questions add me on Discord: Capocoppe25#2670
